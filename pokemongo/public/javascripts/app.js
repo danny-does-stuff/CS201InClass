@@ -29,10 +29,7 @@ function mainCtrl ($scope, pokemonFetcher) {
   $scope.pokemon = [];
 
   $scope.addPoki = function() {
-    console.log('aaaaayy');
-    debugger;
     var formData = {name:$scope.Name,avatarUrl:$scope.Url};
-    alert(formData);
     pokemonFetcher.post(formData); // Send the data to the back end
     $scope.pokemon.push(formData); // Update the model
   }
